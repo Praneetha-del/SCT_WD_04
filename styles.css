@@ -181,7 +181,9 @@ body {
 .input-section {
     margin-bottom: 25px;
 }
+/* Update these styles in your existing CSS */
 
+/* Input Container */
 .input-container {
     display: flex;
     margin-bottom: 15px;
@@ -193,36 +195,69 @@ body {
 
 .input-container input {
     flex: 1;
-    padding: 15px 20px;
+    padding: 12px 15px; /* Adjusted padding */
     border: none;
     background: transparent;
     color: white;
-    font-size: 1rem;
+    font-size: 0.95rem; /* Slightly smaller font */
     outline: none;
+    min-width: 50px; /* Prevents squeezing */
 }
 
 .input-container button {
-    padding: 0 20px;
+    padding: 0 15px; /* Reduced padding */
     border: none;
     background: var(--cosmic-purple);
     color: white;
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 1rem; /* Adjusted size */
     transition: all 0.3s ease;
+    min-width: 44px; /* Minimum touch target */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.input-container button:hover {
-    background: var(--supernova-pink);
-}
-
+/* Voice Button Specific */
 #voice-btn {
     background: var(--nebula-blue);
+    font-size: 0.9rem; /* Slightly smaller icon */
 }
 
-.task-options {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
+/* Add Button Specific */
+#add-btn {
+    font-size: 1.0rem; /* Balanced size */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+    .input-container {
+        flex-wrap: wrap; /* Allow wrapping if needed */
+    }
+    
+    .input-container input {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+        order: 1; /* Input first */
+        width: 100%;
+    }
+    
+    .input-container button {
+        padding: 0 12px;
+        height: 40px; /* Fixed height */
+        min-width: 40px;
+        order: 2; /* Buttons after input */
+    }
+    
+    #voice-btn, #add-btn {
+        flex: 1; /* Equal width buttons */
+    }
+    
+    .task-options {
+        order: 3; /* Options last */
+        width: 100%;
+        margin-top: 10px;
+    }
 }
 
 .task-options select, .task-options input {
