@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CosmicTask | Stellar Productivity App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="cosmic-nav">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <i class="fas fa-rocket"></i> CosmicTask
+            </a>
+            <button class="nav-toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Section (Main App) -->
+    <section id="home" class="section">
+        <div class="cosmic-bg"></div>
+        <div class="app-container">
+            <header class="app-header">
+                <h1><i class="fas fa-rocket"></i> CosmicTask</h1>
+                <p>Organize your universe, one task at a time.</p>
+            </header>
+
+            <!-- Progress Tracker -->
+            <div class="progress-tracker">
+                <div class="stars-container" id="stars-container"></div>
+                <div class="progress-text" id="progress-text">0% Complete</div>
+            </div>
+
+            <!-- Task Input -->
+            <div class="input-section">
+                <div class="input-container">
+                    <input type="text" id="task-input" placeholder="Add a cosmic task...">
+                    <button id="voice-btn"><i class="fas fa-microphone"></i></button>
+                    <button id="add-btn"><i class="fas fa-plus"></i></button>
+                </div>
+                
+                <div class="task-options">
+                    <select id="task-category">
+                        <option value="work">🚀 Work</option>
+                        <option value="personal">🌌 Personal</option>
+                        <option value="fitness">💪 Fitness</option>
+                        <option value="learning">📚 Learning</option>
+                    </select>
+                    
+                    <input type="date" id="task-date">
+                    <input type="time" id="task-time">
+                </div>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="filter-section">
+                <button class="filter-btn active" data-filter="all">All Tasks</button>
+                <button class="filter-btn" data-filter="upcoming">Upcoming</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+
+            <!-- Task List -->
+            <div class="task-list-container">
+                <ul id="task-list"></ul>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats-section">
+                <div class="stat-box">
+                    <span id="total-tasks">0</span>
+                    <span>Total Tasks</span>
+                </div>
+                <div class="stat-box">
+                    <span id="completed-tasks">0</span>
+                    <span>Completed</span>
+                </div>
+                <div class="stat-box">
+                    <span id="pending-tasks">0</span>
+                    <span>Pending</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section">
+        <div class="features-container">
+            <h2 class="section-title">Cosmic Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-meteor"></i>
+                    <h3>Voice Commands</h3>
+                    <p>Add tasks by speaking - perfect when you're on the go!</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-star"></i>
+                    <h3>Smart Filters</h3>
+                    <p>View All, Upcoming, or Completed tasks with one click.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-galaxy"></i>
+                    <h3>Cosmic Themes</h3>
+                    <p>Beautiful space-inspired design that's easy on the eyes.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3>Deadline Tracking</h3>
+                    <p>Never miss a due date with visual reminders.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="contact-container">
+            <h2 class="section-title">Contact Us</h2>
+            <form id="contact-form" class="cosmic-form">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="cosmic-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="cosmic-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3><i class="fas fa-rocket"></i> CosmicTask</h3>
+                <p>Reach for the stars with your productivity!</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 CosmicTask. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <!-- Notification -->
+    <div class="cosmic-notification" id="notification"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
